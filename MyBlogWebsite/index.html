@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Uraid Hussain's Blog</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: #007acc;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    .blog {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 20px;
+      background: white;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .blog h2 {
+      color: #007acc;
+    }
+    .date-time {
+      text-align: center;
+      font-size: 14px;
+      margin-top: 10px;
+      color: gray;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Uraid Hussain's Blog</h1>
+</header>
+
+<div class="date-time" id="datetime"></div>
+
+<div class="blog">
+  <h2>My First Blog Post</h2>
+  <p>Welcome to my new blog! I will be sharing interesting thoughts, tips, and updates here.</p>
+</div>
+
+<script>
+  function updateDateTime() {
+    const now = new Date();
+    const formatted = now.toLocaleString();
+    document.getElementById("datetime").textContent = "Current Time: " + formatted;
+  }
+  updateDateTime();
+  setInterval(updateDateTime, 1000);
+</script>
+
+</body>
+</html>
